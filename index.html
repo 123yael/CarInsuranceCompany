@@ -1,358 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>רכב בטוח</title>
-        
-        <link rel="stylesheet" href="./css/index.css"/>
-        <link rel="stylesheet" href="./src/css/all.css"/>
-        <link rel="stylesheet" href="./src/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="./src/css/mdb.min.css"/>
 
-        <link type="image/x-icon" rel="icon" href="./img/icon.gif" />
-    </head>
-    <body aria-busy="true">
-        <!-- סרגל כלים -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" dir="rtl">
-            <div class="container">   
-                <!-- לוגו עם קישור -->
-                <a class="navbar-brand" href="#" style="font-size: 35px;">
-                    <strong><img src="./img/לוגו.png" width="100"/></strong>
-                </a>      
-                <!-- כפותור מוסתר למסך קטן -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>       
-                <!-- קישורים -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 22px;">   
-                    <!-- ימין -->
-                    <ul class="navbar-nav" style="float: left;">
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light font-weight-bold" href="#">בית</a>
-                        </li>                     
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light font-weight-bold" href="#aa">אודות</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light font-weight-bold" href="#bb">פעולות</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light font-weight-bold" href="#cc">ביטוחים</a>
-                        </li>
-                    </ul>      
-                    <!-- שמאל -->
-                    <ul class="navbar-nav nav-flex-icons mr-auto">
-                        <li class="nav-item" style="position: relative;">
-                            <button class="pl-5 pr-5 pt-2 pb-2 btn nav-link border rounded" style="font-size: 17px;" onclick="myConect()">
-                                כניסה לאיזור האישי
-                            </button>
-                            <div id="myB" class="dropdown-menu" style="width: 100%; z-index: 99;top: 0%; background-color: #1C2331; color: white; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;" >
-                                <form class="px-3 py-3" style="text-align: left; width: 100%;" onsubmit="myEnter(window.event)">
-                                    <!-- שדה קלט לאימל -->
-                                    <h2 style="text-align: center;">כניסה לאיזור האישי</h2>
-                                    <div class="form-outline">
-                                        <input type="email" id="form2Example1" class="form-control" />
-                                        <label class="form-label" for="form2Example1">דואר אלקטרוני</label>
-                                    </div>        
-                                    <!-- שדה קלט לסיסמה -->
-                                    <div class="form-outline">
-                                        <input type="password" id="form2Example2" class="form-control" />
-                                        <label class="form-label" for="form2Example2">סיסמה</label>
-                                    </div>                              
-                                    <!-- זכור אותי -->
-                                    <div class="mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="form2Example3" checked/>
-                                        <label class="form-check-label" for="form2Example3"> זכור אותי </label>
-                                    </div>                                   
-                                    <!-- כפתור כניסה למערכת -->
-                                    <button type="submit" class="form-control" style="border: 2px solid white; background-color: #1C2331; color: white;">כניסה</button>
-                                </form>
-                                <!-- כפתור לסגור את המודל כניסה -->
-                                <div class="btn ml-0 p-0 mb-0" style="text-align: center; font-size: 25px; width: 50px; height: 30px; background-color: white; color:#1C2331;" onclick="myNotConect()">^</div>
-                            </div>
-                        </li>
-                    </ul>      
-                </div>     
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רכב בטוח</title>
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./src/css/all.css" />
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./src/css/mdb.min.css" />
+
+    <link type="image/x-icon" rel="icon" href="./img/icon.gif" />
+</head>
+
+<body aria-busy="true">
+    <!-- סרגל כלים -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" dir="rtl">
+        <div class="container">
+            <!-- לוגו עם קישור -->
+            <a class="navbar-brand" href="#" style="font-size: 35px;">
+                <strong><img src="./img/לוגו.png" width="100" /></strong>
+            </a>
+            <!-- כפותור מוסתר למסך קטן -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- קישורים -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 22px;">
+                <!-- ימין -->
+                <ul class="navbar-nav" style="float: left;">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light font-weight-bold" href="#">בית</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light font-weight-bold" href="#aa">אודות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light font-weight-bold" href="#bb">פעולות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light font-weight-bold" href="#cc">ביטוחים</a>
+                    </li>
+                </ul>
+                <!-- שמאל -->
+                <ul class="navbar-nav nav-flex-icons mr-auto">
+                    <li class="nav-item" style="position: relative;">
+                        <button class="pl-5 pr-5 pt-2 pb-2 btn nav-link border rounded" style="font-size: 17px;"
+                            onclick="myConect()">
+                            כניסה לאיזור האישי
+                        </button>
+                        <div id="myB" class="dropdown-menu"
+                            style="width: 100%; z-index: 99;top: 0%; background-color: #1C2331; color: white; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                            <form class="px-3 py-3" style="text-align: left; width: 100%;"
+                                onsubmit="myEnter(window.event)">
+                                <h2 style="text-align: center;">כניסה לאיזור האישי</h2>
+                                <div class="form-outline">
+                                    <input type="email" id="form2Example1" class="form-control" />
+                                    <label class="form-label" for="form2Example1">דואר אלקטרוני</label>
+                                </div>
+                                <div class="form-outline">
+                                    <input type="password" id="form2Example2" class="form-control" />
+                                    <label class="form-label" for="form2Example2">סיסמה</label>
+                                </div>
+                                <div class="mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="form2Example3"
+                                        checked />
+                                    <label class="form-check-label" for="form2Example3"> זכור אותי </label>
+                                </div>
+                                <button type="submit" class="form-control"
+                                    style="border: 2px solid white; background-color: #1C2331; color: white;">כניסה</button>
+                            </form>
+                            <!-- כפתור לסגור את המודל כניסה -->
+                            <div class="btn ml-0 p-0 mb-0"
+                                style="text-align: center; font-size: 25px; width: 50px; height: 30px; background-color: white; color:#1C2331;"
+                                onclick="myNotConect()">^</div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <!-- סרגל כלים -->  
-        <!-- מבוא עמוד מלא -->
-        <div class="myMainBackground parallax mask">    
-            <!-- יישור ומרכוז-->
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" >    
-                <!-- תוכן -->
-                <div class="text-center white-text mx-5 wow fadeIn" style="position: absolute; top: 35%;">
-                    <h1 class="mb-4"><strong>הביטוח הכי בטוח לרכב</strong></h1>       
-                    <a target="_blank" href="./html/PaymentAndRegistration.html" class="btn btn-lg waves-effect" style="font-size: 20px; border-radius: 7px; background-color: rgba(28,35, 49, 0.5); border: 1px solid white;">לקבלת הצעה
-                        <i class="ml-2">🗯</i>
-                    </a>      
-                </div>
-                <!-- תוכן -->       
-            </div>
-            <!-- יישור ומרכוז-->   
         </div>
-        <!-- מבוא עמוד מלא-->
-        <!-- פריסה ראשית -->
-        <main class="myMain">
-            <div class="container mt-5">      
-                <!--חלק: אודות-->
-                <section class="mt-5" id="aa">
-                    <h2 class="my-5 pt-5 h2 text-center">אודות</h2>        
-                    <!--Grid row1-->
-                    <div class="row">    
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-5">
-                            <div class="row">   
-                                <div class="col-md-10 ml-5"> 
-                                    <img src="./img/Car finance.gif" style="float: right;" width="200">   
-                                </div>   
+    </nav>
+    <!-- סרגל כלים -->
+    <!-- מבוא עמוד מלא -->
+    <div class="myMainBackground parallax mask">
+        <!-- יישור ומרכוז-->
+        <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+            <!-- תוכן -->
+            <div class="text-center white-text mx-5 wow fadeIn" style="position: absolute; top: 35%;">
+                <h1 class="mb-4"><strong>הביטוח הכי בטוח לרכב</strong></h1>
+                <a target="_blank" href="./html/PaymentAndRegistration.html" class="btn btn-lg waves-effect"
+                    style="font-size: 20px; border-radius: 7px; background-color: rgba(28,35, 49, 0.5); border: 1px solid white;">לקבלת
+                    הצעה
+                    <i class="ml-2">🗯</i>
+                </a>
+            </div>
+            <!-- תוכן -->
+        </div>
+        <!-- יישור ומרכוז-->
+    </div>
+    <!-- מבוא עמוד מלא-->
+    <!-- פריסה ראשית -->
+    <main class="myMain">
+        <div class="container mt-5">
+            <!--חלק: אודות-->
+            <section class="mt-5" id="aa">
+                <h2 class="my-5 pt-5 h2 text-center">אודות</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <div class="row">
+                            <div class="col-md-10 ml-5">
+                                <img src="./img/Car finance.gif" style="float: right;" width="200">
                             </div>
                         </div>
-                        <!--Grid column-->           
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-5">        
-                            <!-- Main heading -->
-                            <div class="row">   
-                                <div class="col-md-10 mr-5 pt-3"> 
-                                    <h3 class="h1 mb-3">יחס אישי</h3>
-                                    <p class="h5">אנחנו מתחייבים להמשיך לפעול ללא הרף להגשמת חזוננו –  להעניק ללקוחותינו שקט נפשי. 
-                                        אמנת שירות זו מבטאת את שאיפותינו להעניק לך חווית שירות טובה, יעילה ומקצועית.
-                                    </p>
-                                </div>   
-                            </div>                      
-                        </div>
-                        <!--Grid column-->      
                     </div>
-                    <!--Grid row1-->  
+                    <div class="col-md-6 mb-5">
+                        <div class="row">
+                            <div class="col-md-10 mr-5 pt-3">
+                                <h3 class="h1 mb-3">יחס אישי</h3>
+                                <p class="h5">אנחנו מתחייבים להמשיך לפעול ללא הרף להגשמת חזוננו – להעניק ללקוחותינו שקט
+                                    נפשי.
+                                    אמנת שירות זו מבטאת את שאיפותינו להעניק לך חווית שירות טובה, יעילה ומקצועית.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <!--Grid row2-->
-                    <div class="row">    
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-5">        
-                            <!-- Main heading -->
-                            <div class="row">   
-                                <div class="col-md-10 ml-5"> 
-                                    <h3 class="h1 mb-3 " style="float: right;">הגינות, כבוד והערכה</h3>
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <p class="h5" style="text-align: right;">
-                                        אנו פועלים מתוך הערכה רבה וכבוד לצרכיך, מכבדים את פרטיותך ואת סודיות וחיסיון המידע שלך
-                                        , תוך קיום הוראות הדין, ומתחייבים לנהוג באדיבות, ביושרה ובהגינות כלפיך, כי חשוב לנו מה שחשוב לך.                                    </p>
-                                </div>   
-                            </div>                      
-                        </div>
-                        <!--Grid column-->   
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-5">
-                            <div class="row">   
-                                <div class="col-md-10 mr-5 pt-3"> 
-                                    <img src="./img/Front car.gif" style="float: left;" width="200">   
-                                </div>   
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <div class="row">
+                            <div class="col-md-10 ml-5">
+                                <h3 class="h1 mb-3 " style="float: right;">הגינות, כבוד והערכה</h3>
+                                <br />
+                                <br />
+                                <br />
+                                <p class="h5" style="text-align: right;">
+                                    אנו פועלים מתוך הערכה רבה וכבוד לצרכיך, מכבדים את פרטיותך ואת סודיות וחיסיון המידע
+                                    שלך
+                                    , תוך קיום הוראות הדין, ומתחייבים לנהוג באדיבות, ביושרה ובהגינות כלפיך, כי חשוב לנו
+                                    מה שחשוב לך. </p>
                             </div>
                         </div>
-                        <!--Grid column-->              
                     </div>
-                    <!--Grid row2-->                         
+                    <div class="col-md-6 mb-5">
+                        <div class="row">
+                            <div class="col-md-10 mr-5 pt-3">
+                                <img src="./img/Front car.gif" style="float: left;" width="200">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <!--Grid row3-->
-                    <div class="row">    
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-5">
-                            <div class="row">   
-                                <div class="col-md-10 ml-5"> 
-                                    <img src="./img/City driver.gif" style="float: right;" width="200">   
-                                </div>   
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <div class="row">
+                            <div class="col-md-10 ml-5">
+                                <img src="./img/City driver.gif" style="float: right;" width="200">
                             </div>
                         </div>
-                        <!--Grid column-->           
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-5">        
-                            <!-- Main heading -->
-                            <div class="row">   
-                                <div class="col-md-10 mr-5 pt-3"> 
-                                    <h3 class="h1 mb-3">בהירות</h3>
-                                    <p class="h5">
-                                        אנו שואפים לספק לך מידע ענייני, ברור, מהימן ופשוט ככל שניתן בכל פניה, תוך טיפול מקיף ויסודי בפנייתך. נעשה כל מאמץ בכדי שתקבל את 
-                                        מלוא המידע הרלוונטי לפנייתך וכי תהנה מחוויית שירות נעימה ומועילה. נשמח ליידע אותך אודות אופן הטיפול בפנייתך ומשך הזמן הצפוי לסיום הטיפול. 
-                                    </p>
-                                </div>   
-                            </div>                      
-                        </div>
-                        <!--Grid column-->      
                     </div>
-                    <!--Grid row3--> 
-                </section>
-                <!--חלק: אודות--> 
-                <hr class="mb-5">       
-                <!--חלק: פעולות נפוצות-->
-                <section id="bb">
-                    <h2 class="my-5 h3 text-center">פעולות נפוצות</h2>       
-                    <!-- שורה ראשונה -->
-                    <div class="row features-small mt-5 wow fadeIn">           
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-5">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center">
-                                    <a href="#"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                    <div class="col-md-6 mb-5">
+                        <div class="row">
+                            <div class="col-md-10 mr-5 pt-3">
+                                <h3 class="h1 mb-3">בהירות</h3>
+                                <p class="h5">
+                                    אנו שואפים לספק לך מידע ענייני, ברור, מהימן ופשוט ככל שניתן בכל פניה, תוך טיפול מקיף
+                                    ויסודי בפנייתך. נעשה כל מאמץ בכדי שתקבל את
+                                    מלוא המידע הרלוונטי לפנייתך וכי תהנה מחוויית שירות נעימה ומועילה. נשמח ליידע אותך
+                                    אודות אופן הטיפול בפנייתך ומשך הזמן הצפוי לסיום הטיפול.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--חלק: אודות-->
+            <hr class="mb-5">
+            <!--חלק: פעולות נפוצות-->
+            <section id="bb">
+                <h2 class="my-5 h3 text-center">פעולות נפוצות</h2>
+                <!-- שורה ראשונה -->
+                <div class="row features-small mt-5 wow fadeIn">
+                    <div class="col-xl-3 mb-5">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center">
+                                <a href="#">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/message.gif" width="50" />
                                         <br />
                                         להגיש תביעה
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-5">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center text-center">
-                                    <a href="#"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                    </div>
+                    <div class="col-xl-3 mb-5">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center text-center">
+                                <a href="#">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/folder.gif" width="50" />
                                         <br />
                                         לבדוק מצב טביעה
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->           
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-5">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center text-center">
-                                    <a href="#"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                    </div>
+                    <div class="col-xl-3 mb-5">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center text-center">
+                                <a href="#">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/postman.gif" width="50" />
                                         <br />
                                         לאתר ספקים
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->  
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-5">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center text-center">
-                                    <a href="#"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                    </div>
+                    <div class="col-xl-3 mb-5">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center text-center">
+                                <a href="#">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/signposts.gif" width="50" />
                                         <br />
                                         לשנות מסלול השקעה
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->            
                     </div>
-                    <!--/שורה ראשונה-->  
-                    <!-- שורה שניה -->
-                    <div class="row features-small mt-0 wow fadeIn mb-5">          
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-2">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center text-center">
-                                    <a href="./html/join.html"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                </div>
+                <!--/שורה ראשונה-->
+                <!-- שורה שניה -->
+                <div class="row features-small mt-0 wow fadeIn mb-5">
+                    <div class="col-xl-3 mb-2">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center text-center">
+                                <a target="_blank" href="./html/join.html">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/social-care.gif" width="50" />
                                         <br />
                                         להצטרף לביטוח
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->           
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-2">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center text-center">
-                                    <a href="#"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                    </div>
+                    <div class="col-xl-3 mb-2">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center text-center">
+                                <a href="#">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/padlock.gif" width="50" />
                                         <br />
                                         לעדכן פרטים אישיים
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->           
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-2">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center text-center">
-                                    <a href="#"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                    </div>
+                    <div class="col-xl-3 mb-2">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center text-center">
+                                <a href="#">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/document.gif" width="50" />
                                         <br />
                                         לצפות במסמכים
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->           
-                        <!--Grid column-->
-                        <div class="col-xl-3 mb-2">
-                            <!--Grid row-->
-                            <div class="border flex-center text-center">
-                                <div class="col-10 row pt-4 pb-4 flex-center text-center">
-                                    <a href="#"><h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
+                    </div>
+                    <div class="col-xl-3 mb-2">
+                        <div class="border flex-center text-center">
+                            <div class="col-10 row pt-4 pb-4 flex-center text-center">
+                                <a href="#">
+                                    <h5 class="feature-title font-bold mb-1 grey-text font-weight-bold">
                                         <img src="./img/credit.gif" width="50" />
                                         <br />
                                         לעדכן אמצעי תשלום
-                                    </h5></a>
-                                </div>
+                                    </h5>
+                                </a>
                             </div>
-                            <!--/Grid row-->
                         </div>
-                        <!--/Grid column-->          
                     </div>
-                    <!--/שורה שניה-->      
-                </section>
-                <!--חלק: פעולות נפוצות-->         
-                <hr class="my-5"> 
-                <!--חלק: הביטוחים שלנו-->
-                <section id="cc">       
-                    <h2 class="my-5 h3 text-center">הביטוחים שלנו</h2>              
-                </section>
-                <!--חלק: הביטוחים שלנו-->                               
-            </div>
-        </main>
-        <!-- פריסה ראשית -->
+                </div>
+                <!--/שורה שניה-->
+            </section>
+            <!--חלק: פעולות נפוצות-->
+            <hr class="my-5">
+            <!--חלק: הביטוחים שלנו-->
+            <section id="cc">
+                <h2 class="my-5 h3 text-center">הביטוחים שלנו</h2>
+            </section>
+            <!--חלק: הביטוחים שלנו-->
+        </div>
+    </main>
+    <!-- פריסה ראשית -->
 
-        <!--כותרת תחתונה-->
-        <footer class="page-footer text-center font-small mt-4 wow fadeIn">        
-            <!--Copyright-->
-            <div class="footer-copyright py-4" style="vertical-align: middle;">
-                כל הזכויות שמורות © yael malkin 
-            </div>
-            <!--/.Copyright-->
-        </footer>
-        <!--כותרת תחתונה-->
+    <!--כותרת תחתונה-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+        <div class="footer-copyright py-4" style="vertical-align: middle;">
+            כל הזכויות שמורות © yael malkin
+        </div>
+    </footer>
+    <!--כותרת תחתונה-->
 
-        <button onclick="topFunction()" id="myTop" title="לראש הדף">
-            <img src="./img/top.png"  width="50"/>
-        </button>
-        
-        <script type="text/javascript" src="./js/insurance.js"></script>
+    <button onclick="topFunction()" id="myTop" title="לראש הדף">
+        <img src="./img/top.png" width="50" />
+    </button>
 
-        <script type="text/javascript" src="./js/index.js"></script>     
-        <script type="text/javascript" src="./src/js/jquery.min.js"></script>
-        <script type="text/javascript" src="./src/js/popper.min.js"></script>
-        <script type="text/javascript" src="./src/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="./src/js/mdb.min.js"></script>
+    <script type="text/javascript" src="./js/insurance.js"></script>
 
-        <div class="hiddendiv common"></div>
-        <script type="text/javascript" src="./src/js/mdb-plugins-gathered.min.js"></script>
-    </body>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./src/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./src/js/popper.min.js"></script>
+    <script type="text/javascript" src="./src/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./src/js/mdb.min.js"></script>
+
+    <div class="hiddendiv common"></div>
+    <script type="text/javascript" src="./src/js/mdb-plugins-gathered.min.js"></script>
+</body>
+
 </html>

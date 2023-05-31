@@ -188,6 +188,7 @@ const myS1 = () => {
     a.classList.add("btn-rounded")
     a.classList.add("btn")
     a.classList.add("myTimeOutA")
+    a.target = "_blank"
     div.appendChild(a)
     document.body.appendChild(div)
 }
