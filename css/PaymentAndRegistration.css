@@ -1,0 +1,130 @@
+
+/* דברים כללים כל הדף */
+body {
+    background-color: #1C2331 !important;
+    color: white !important;
+    font-family: FbPekan !important;
+    text-align: right !important;
+}
+
+/* שלא יהיה פס גלילה בכל הדף */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* עיצוב הרקע של הרקע של הטופס */
+.myDivMain {
+    background-image: url('../img/רקע2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+/* עיצוב הרקע של הטופס */
+.myDivMainSecond {
+    background-color: #1C2331;
+    height: 100vh;
+    box-shadow: 5px;
+    margin: 0px;
+    direction: rtl;
+    width: 500px;
+    color: white;
+    overflow-y: scroll;
+    position: relative;
+}
+
+/* עיצוב כפתור החץ לאחורה */
+.myPreviousButton {
+    background-color: #1C2331;
+    color: white;
+    font-size: 30px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    border: 1px solid white !important;
+    border-radius: 10px !important;
+}
+
+.invalidFeedback {
+    display: none;
+    color: red;
+}
+
+.mySF {
+    background-color: #1C2331;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.myChoose {
+    background-color: white;
+    color: #1C2331;
+    border-radius: 10px;
+    font-size: 25px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.myImg {
+
+    width: 40%;
+    top: 0px;
+    left: 0px;
+    /* z-index: -2; */
+}
+
+#amount  {
+    margin-right: 0px !important;
+    border-radius: 10px;
+    background-color: #1C2331;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#button1 {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #1C2331;
+    color: #1C2331;
+    margin-bottom: 10px;
+}
+
+#sum {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #1C2331;
+    border: 1px solid white;
+    color: white;
+}
+
+.p1 {
+    color: white;
+    font-size: 25px;
+}
+
+.myPrice {
+    font-size: 20px;
+}
+
+#nextMonth1, #today {
+    text-align: center;
+    font-size: 30px;
+    height: 150px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.myBG {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    margin-bottom: -10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>רכב בטוח</title>      
+        <link rel="stylesheet" href="../css/personalArea.css"/>
+        <link rel="stylesheet" href="../src/css/all.css"/>
+        <link rel="stylesheet" href="../src/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../src/css/mdb.min.css"/>
+        <link type="image/x-icon" rel="icon" href="/img/icon.gif" />
+    </head>
+    <body aria-busy="true">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" dir="rtl" style="background-color: rgba(28,35, 49);">
+            <div class="container">   
+                <!-- לוגו עם קישור -->
+                <a class="navbar-brand" href="../index.html" style="font-size: 35px;">
+                    <strong><img src="../img/לוגו.png" width="100"/></strong>
+                </a>      
+                <!-- כפותור מוסתר למסך קטן -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>       
+                <!-- קישורים -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 22px;">    
+                    <!-- שמאל -->
+                    <ul class="navbar-nav nav-flex-icons mr-auto">
+                        <li class="nav-item" style="position: relative;">
+                            <button class="pl-5 pr-5 pt-2 pb-2 btn nav-link border rounded" style="font-size: 17px;" onclick="myConect()">
+                                לביטול פוליסת הביטוח
+                            </button>
+                            <div id="myB" class="dropdown-menu" style="width: 100%; z-index: 99;top: 0%; background-color: #1C2331; color: white; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;" >
+                                <form class="px-3 py-3" style="text-align: left; width: 100%;" onsubmit="myExit(window.event)">
+                                    <h2 style="text-align: center;">לאימות הנתונים</h2>
+                                    <div class="form-outline">
+                                        <input type="tel" id="pone" class="form-control" />
+                                        <label class="form-label" for="form2Example1">מספר פלפון</label>
+                                    </div>        
+                                    <div class="form-outline">
+                                        <input type="number" id="numOfCar" class="form-control" />
+                                        <label class="form-label" for="form2Example2">מספר רכב</label>
+                                    </div>                                                            
+                                    <button type="submit" class="form-control" style="border: 2px solid white; background-color: #1C2331; color: white;">יציאה</button>
+                                </form>
+                                <div class="btn ml-0 p-0 mb-0" style="text-align: center; font-size: 25px; width: 50px; height: 30px; background-color: white; color:#1C2331;" onclick="myNotConect()">^</div>
+                            </div>
+                        </li>
+                    </ul>      
+                </div>                 
+            </div>
+            <div id="tav"></div>
+        </nav>
+
+        <!-- לתוך תגית זו יהיה יצירה דינאמית -->
+        <div id="myMavo"></div>
+
+        <!-- לתוך תגית זו יהיה יצירה דינאמית -->
+        <section></section>
+
+
+        <!-- לתוך תגית זו יהיה יצירה דינאמית -->
+        <section style="margin-top: 100vh;"></section>
+
+        <!-- לתוך תגית זו יש יצירה דינאמית -->
+        <footer></footer>
+
+        
+        <script type="text/javascript" src="../js/personalArea.js"></script>     
+        <script type="text/javascript" src="../src/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../src/js/popper.min.js"></script>
+        <script type="text/javascript" src="../src/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../src/js/mdb.min.js"></script>
+        <div class="hiddendiv common"></div>
+        <script type="text/javascript" src="../src/js/mdb-plugins-gathered.min.js"></script>
+    </body>
+</html>

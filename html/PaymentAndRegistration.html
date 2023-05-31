@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רכב בטוח</title>
+
+    <link rel="stylesheet" href="../css/PaymentAndRegistration.css" />
+
+    <link rel="stylesheet" href="../src/css/all.css" />
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/css/mdb.min.css" />
+
+    <link type="image/x-icon" rel="icon" href="../img/icon.gif" />
+</head>
+
+<body>
+    <div class="py-5 text-center" style="text-align: center;position: fixed; right: 0px; bottom: 0px;">
+        <img class="d-block mx-auto mb-4 mt-lg-5" src="../img/לוגו.png" alt="לוגו" style="width: 50%;">
+    </div>
+    <div class="myDivMain">
+        <main>
+            <div class="myDivMainSecond p-5">
+                <button class="btn myPreviousButton" onclick="myPrevious()">➡</button>
+                <form id="1" style="display: block;" onsubmit="myCheck(window.event); return false">
+                    <h4 class="mb-3 text-center">פרטי נהג</h4>
+                    <div class="row g-3">
+                        <div class="col-sm-12">
+                            <label for="firstName" class="form-label">שם פרטי</label>
+                            <input type="text" class="form-control" id="firstName" />
+                            <div class="invalidFeedback" id="a">אנא הכנס שם פרטי תקין</div>
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="lastName" class="form-label">שם משפחה</label>
+                            <input type="text" class="form-control" id="lastName" />
+                            <div class="invalidFeedback">נא להזין שם משפחה חוקי</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="tz" class="form-label">מספר תעודת זהות</label>
+                            <input type="text" class="form-control" id="tz" />
+                            <div class="invalidFeedback">נא להזין את מספר זהות שלך</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="pone" class="form-label">מספר טלפון</label>
+                            <input type="text" class="form-control" id="pone" />
+                            <div class="invalidFeedback">נא להזין את מספר הטלפון שלך</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">אימייל<span class="text-muted">(זה גם השם
+                                    משתמש)</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+                            <div class="invalidFeedback">אנא הזן כתובת אימייל חוקית כדי להיכנס כך למערכת.</div>
+                        </div>
+
+                        <div class="col-md-12 mt-4 nb-4">
+                            חשוב לנו להעניק לך שירות אישי וממוקד! לצורך זה נשמח לשלוח
+                            לך עדכונים ומידע פרסומי ושיווקי בטלפון, במייל, מכל החברות שלנו בקבוצת רכב בטוח
+                            ובהתאם למדיניות הפרטיות. מבטיחים לא להציק ולשלוח רק דברים חשובים לדעתנו.
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input type="checkbox" id="myCheckBox1" class="form-check-input" checked />
+                            <label for="myCheckBox1" class="form-check-label-left"> כן אני מעונינת לקבל פרסומות </label>
+                        </div>
+
+                        <div class="col-md-12 mt-2" style="text-align: center;">
+                            <input type="submit" value="הלאה"
+                                class="btn btn-light btn-rounded pt-lg-1 pb-lg-1 pl-lg-5 pr-lg-5"
+                                style="font-size: 20px;" />
+                        </div>
+
+                        <p class="col-md-12 mt-lg-4" style="text-align: center;">
+                            הפרטים שמסרת ישמשו אותנו לחזור אליך במייל ו/או בטלפון
+                            בכל שלב בתהליך הרכישה במידה ויופסק או כדי לשחזר את הצעת המחיר
+                        </p>
+
+                        <p style="text-align: center;" class="col-md-12">טלפון לשאלות: 0583220353</p>
+                    </div>
+                </form>
+
+
+                <form id="2" style="display: none;" onsubmit="myCheck(window.event); return false">
+                    <h4 class="mb-3 text-center">תאריך תחילת הביטוח</h4>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <input type="button" class="form-control btn-rounded" onclick="saveStartDate('today')"
+                                id="today" value="היום" />
+                        </div>
+                        <div class="col-6">
+                            <input type="button" class="form-control btn-rounded" onclick="saveStartDate('nextMonth1')"
+                                id="nextMonth1" value="" />
+                        </div>
+                        <div class="invalidFeedback">נא לבחור את אחד התאריכים</div>
+                        <div style="text-align: center;" class="mt-3 col-md-12">
+                            <input type="submit" value="הלאה"
+                                class="btn btn-light btn-rounded pt-lg-1 pb-lg-1 pl-lg-5 pr-lg-5"
+                                style="font-size: 20px;" />
+                        </div>
+
+                        <p style="text-align: center;" class="col-md-12 mt-3">טלפון לשאלות: 0583220353</p>
+                    </div>
+                </form>
+
+
+                <form id="3" style="display: none;" onsubmit="myCheck(window.event); return false">
+                    <h4 class="mb-3 text-center">פרטי רכב</h4>
+                    <div class="row g-3">
+                        <div class="col-sm-12">
+                            <label for="numOfCar" class="form-label">מספר רישוי</label>
+                            <input type="text" class="form-control" id="numOfCar" placeholder="" value="" required="">
+                            <div class="invalidFeedback">במאגרי המידע המעודכנים אצלינו לא קיים כזה רכב, נסה שוב</div>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="form-label">סוג הרכב</label>
+                            <select name="sign" class="form-control">
+                                <option hidden></option>
+                                <option>רכב פרטי</option>
+                                <option>משאית</option>
+                                <option>מונית</option>
+                                <option>אופנוע</option>
+                                <option>רכב מסחרי</option>
+                            </select>
+                            <div class="invalidFeedback">נא לבחור סוג רכב</div>
+                        </div>
+
+                        <div style="text-align: center;" class="mt-3 col-md-12">
+                            <input type="submit" value="הלאה"
+                                class="btn btn-light btn-rounded pt-lg-1 pb-lg-1 pl-lg-5 pr-lg-5"
+                                style="font-size: 20px;" />
+                        </div>
+
+                        <p style="text-align: center;" class="col-md-12 mt-3">טלפון לשאלות: 0583220353</p>
+                    </div>
+                </form>
+
+
+                <form id="4" style="display: none;" onsubmit="myCheck(window.event); return false">
+                    <h4 class="mb-3 text-center">פרטים נוספים על הנהג</h4>
+                    <div class="row g-3">
+
+                        <div id="car"></div>
+
+                        <div class="col-12">
+                            <label for="dateOfBirth" class="form-label">תאריך לידה</label>
+                            <input type="date" class="form-control" id="dateOfBirth">
+                            <div class="invalidFeedback">בחר בבקשה תאריך לידה</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="yearOfLicenseIssue" class="form-label">שנת הוצאת רשיון</label>
+                            <input type="number" class="form-control" id="yearOfLicenseIssue">
+                            <div class="invalidFeedback">בחר שנת הוצאת רשיון</div>
+                        </div>
+
+                        <div class="invalidFeedback">אחד או שתיים מהשדות אינם נכונים</div>
+
+                        <div style="text-align: center;" class="mt-3 col-md-12">
+                            <input type="submit" value="הלאה"
+                                class="btn btn-light btn-rounded pt-lg-1 pb-lg-1 pl-lg-5 pr-lg-5"
+                                style="font-size: 20px;" />
+                        </div>
+
+                        <p style="text-align: center;" class="col-md-12 mt-3">טלפון לשאלות: 0583220353</p>
+                    </div>
+                </form>
+
+
+                <form id="5" style="display: none;" onsubmit="myCheck(window.event); return false">
+                    <h4 class="mb-3 text-center">בחירת מוסך שעובד איתנו</h4>
+                    <div class="row g-3">
+
+                        <div id="car"></div>
+
+                        <div class="col-12">
+                            <label for="dateOfBirth" class="form-label">חיפוס מוסך לפי עיר</label>
+                        </div>
+
+                        <div class="col-9">
+                            <select id="myCity" class="form-control">
+                                <option hidden></option>
+                                <option>בית שמש</option>
+                                <option>ירושלים</option>
+                                <option>רחובות</option>
+                                <option>בני ברק</option>
+                                <option>אשדוד</option>
+                            </select>
+                        </div>
+
+                        <div class="col-3">
+                            <input type="button" value="חיפוס" class="form-control" onclick="mygarage(window.event)" />
+                        </div>
+
+                        <div class="col-12" id="garage"></div>
+
+                        <div style="text-align: center;" class="mt-3 col-md-12">
+                            <input type="submit" value="הלאה"
+                                class="btn btn-light btn-rounded pt-lg-1 pb-lg-1 pl-lg-5 pr-lg-5"
+                                style="font-size: 20px;" />
+                        </div>
+
+                        <p style="text-align: center;" class="col-md-12 mt-3">טלפון לשאלות: 0583220353</p>
+                    </div>
+                </form>
+
+
+                <form id="6" style="display: none;" onsubmit="myCheck(window.event); return false">
+                    <h4 class="mb-3 text-center">הצעות הפוליסה</h4>
+                    <h6 class="mb-3 text-center" style="font-size: 25px;">מתוך ההצעות שמתאימות בחר את מה מאתה מעדיף</h6>
+
+                    <div class="row g-3" id="mySuggestions"></div>
+
+                    <div style="text-align: center;" class="mt-3 col-md-12">
+                        <input type="submit" value="הלאה"
+                            class="btn btn-light btn-rounded pt-lg-1 pb-lg-1 pl-lg-5 pr-lg-5"
+                            style="font-size: 20px;" />
+                    </div>
+
+                    <p style="text-align: center;" class="col-md-12 mt-3">טלפון לשאלות: 0583220353</p>
+                </form>
+
+
+                <form id="7" style="display: none;" onsubmit="myCheck(window.event); return false">
+                    <h4 class="mb-3 text-center">פרטי תשלום</h4>
+                    <div class="row gy-3">
+                        <div class="col-md-12">
+                            <label for="nameOfCard" class="form-label">השם על הכרטיס</label>
+                            <input type="text" class="form-control" id="nameOfCard" placeholder="" required="">
+                            <small class="text-muted">השם המלא כפי שמוצג בכרטיס</small>
+                            <div class="invalidFeedback">
+                                יש לציין את השם על הכרטיס
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="numOfCard" class="form-label">מספר הכרטיס</label>
+                            <input type="text" class="form-control" id="numOfCard" placeholder="" required="">
+                            <div class="invalidFeedback">
+                                יש לציין את השם על הכרטיס
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="lastDate" class="form-label">תאריך תפוגה</label>
+                            <input type="month" class="form-control" id="lastDate" placeholder="" required="">
+                            <div class="invalidFeedback">
+                                נדרש תאריך תפוגה
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="codeCvv" class="form-label">קוד (CVV)</label>
+                            <input type="number" class="form-control" id="codeCvv" placeholder="" required="">
+                            <div class="invalidFeedback">
+                                נדרש קוד הבטחה
+                            </div>
+                        </div>
+
+                        <div class="mt-3 col-md-12">
+                            <input type="submit" value="להמשיך ולשלם" class="btn-light btn-rounded mt-5"
+                                style="font-size: 20px; width: 100%;" />
+                        </div>
+
+                        <p style="text-align: center;" class="col-md-12 mt-3">טלפון לשאלות: 0583220353</p>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/insurance.js"></script>
+    <script src="../js/PaymentAndRegistration.js"></script>
+
+</body>
+
+</html>

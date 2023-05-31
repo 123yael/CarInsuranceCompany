@@ -1,0 +1,26 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: FbPekan !important;  
+}
+
+body, html{
+    height:100%
+}
+
+/* רקע ראשוני עיקרי של הדף בית */
+.myMainBackground {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-image: url("../img/רקע4.jpg"), linear-gradient(to top, rgba(28,35,49, 0.1), rgba(28,35, 49));
+    height:100%;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+

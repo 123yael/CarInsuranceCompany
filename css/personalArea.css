@@ -1,0 +1,109 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: FbPekan !important;  
+}
+
+body, html{
+    height:100%;
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #1C2331!important;
+    }
+}
+
+.navbar{
+    box-shadow: none !important;
+}
+
+.page-footer,.top-nav-collapse{
+    background-color:#1C2331
+}
+
+@media only screen and (max-width:768px){
+    .navbar{background-color:#1C2331}
+}
+
+@media only screen and (max-width:830px){
+    .navbar{background-color:#1C2331;}
+}
+
+@media only screen and (max-width:580px){
+    .navbar{padding: 12px;}
+}
+
+#chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0px;
+    z-index: 99;
+    outline: none;
+    font-size: 30px;
+    border: 1px solid white;
+}
+
+.myImgCar {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+
+    z-index: -1;
+}
+
+.tav {
+    font-size: 25px !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid white;
+    background-color: #831164; 
+    vertical-align: middle !important;
+    text-align: center !important;
+    color:white;
+}
+
+.myPratim {
+    padding-top: 100px;
+    height: 100vh;
+    background-color: #1C2331;
+    color: white;
+    position: fixed !important;
+    right: 0px !important;
+    top: 0px !important;
+    text-align: right;
+}
+
+.myPrat {
+    color: white !important;
+    background-color: #1C2331;
+    font-size: 20px !important;
+    z-index: 9 !important;
+    border: none;
+    display: block;
+    text-align: right;
+}
+
+.myPrat:hover {
+    border-left: 1px solid white;
+}
+
+.myNext {
+    color: white;
+    background-color: #1C2331;
+    font-size: 20px;
+}
+
+.mySection {
+    margin-bottom: 30px;
+}
+
+.myFooter {
+    width: 100%;
+}
+
