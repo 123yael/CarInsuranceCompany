@@ -41,7 +41,7 @@ const myEnter = (event) => {
     if(myUser != undefined)
     {
         window.sessionStorage.setItem("myUser", JSON.stringify(myUser))
-        window.open("/html/personalArea.html","_blank","")
+        window.open("./html/personalArea.html","_blank","")
     }
     else
     {
